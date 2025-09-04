@@ -1,0 +1,38 @@
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/modules/node"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/services/FriendNetwork"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/interfaces/web_desktop/3rdparty/favico.js"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "npm"
+    directory: "/interfaces/web_desktop/3rdparty/pdfjs"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/devices/DOSDrivers/DropboxDrive/dropbox-sdk-php"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/devices/DOSDrivers/GoogleDrive/Google"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/php/3rdparty/iCalcreator"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/php/3rdparty/php-ews-master"
+    schedule:
+      interval: "weekly"
+  - package-ecosystem: "composer"
+    directory: "/php/3rdparty/phpmailer"
+    schedule:
+      interval: "weekly"
