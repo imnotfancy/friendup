@@ -37,30 +37,9 @@ var config = JSON.parse("{\"type\":\"configuration\",\"data\":\
     {\
       \"websockets\": { \
           \"port\":1337 \
-      }, \
-      \"database\": { \
-          \"host\": \"192.168.86.130\", \
-          \"user\":\"root\", \
-          \"password\":\"root\", \
-          \"name\": \"FriendMaster\" \
       } \
   } \
 }");
-/*
-var config = JSON.parse("{\"type\":\"configuration\",\"data\":\
-    {\
-      \"websockets\": { \
-          \"port\":1337 \
-      }, \
-      \"database\": { \
-          \"host\": \"215.148.12.6\", \
-          \"user\":\"root\", \
-          \"password\":\"root\", \
-          \"name\": \"FriendMaster\" \
-      } \
-  } \
-}");
-*/
 
 try {
     rawdata = fs.readFileSync('config.json');
@@ -82,10 +61,10 @@ try {
   //mysql.createConnection({
 var connectionPool = mysql.createPool({
     connectionLimit : 100,
-    host: config.data.database.host,
-    user: config.data.database.user,
-    password: config.data.database.password,
-    database: config.data.database.name,
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASSWORD,
+    database: process.env.DB_NAME,
     waitForConnections: true,
   });
 
