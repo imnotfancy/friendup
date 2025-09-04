@@ -122,17 +122,11 @@ if( !class_exists( 'DoorDropboxDrive' ) )
 		function parseSysinfo()
 		{
 			global $SqlDatabase, $User, $Logger;
-			
-			$cfg = file_exists('cfg/cfg.ini') ? parse_ini_file('cfg/cfg.ini',true) : [];
-			
-			if( is_array($cfg) && isset( $cfg['DropboxAPI'] ) )
-			{
-				$this->sysinfo = $cfg['DropboxAPI'];
-			}
-			else
-			{
-				$this->sysinfo = [];
-			}
+
+			$this->sysinfo = [
+				'key' => getenv('DROPBOX_API_KEY'),
+				'secret' => getenv('DROPBOX_API_SECRET'),
+			];
 			
 			
 			

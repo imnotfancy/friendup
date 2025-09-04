@@ -19,3 +19,21 @@ enabled = 0
 
 [FriendChat]
 enabled = 0
+
+[DropboxAPI]
+;key = YOUR_DROPBOX_APP_KEY
+;secret = YOUR_DROPBOX_APP_SECRET
+; Note: It is recommended to set the Dropbox API key and secret as environment variables:
+; export DROPBOX_API_KEY="YOUR_DROPBOX_APP_KEY"
+; export DROPBOX_API_SECRET="YOUR_DROPBOX_APP_SECRET"
+
+[GoogleAPI]
+;key = YOUR_GOOGLE_API_KEY
+;client_id = YOUR_GOOGLE_CLIENT_ID
+;client_secret = YOUR_GOOGLE_CLIENT_SECRET
+;project_id = YOUR_GOOGLE_PROJECT_ID
+; Note: It is recommended to set the Google API keys as environment variables:
+; export GOOGLE_API_KEY="YOUR_GOOGLE_API_KEY"
+; export GOOGLE_CLIENT_ID="YOUR_GOOGLE_CLIENT_ID"
+; export GOOGLE_CLIENT_SECRET="YOUR_GOOGLE_CLIENT_SECRET"
+; export GOOGLE_PROJECT_ID="YOUR_GOOGLE_PROJECT_ID"

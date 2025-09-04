@@ -68,21 +68,13 @@ if( !class_exists( 'GoogleDrive' ) )
 		function parseSysinfo()
 		{
 			global $SqlDatabase, $User, $Logger;
-			
-			$cfg = file_exists('cfg/cfg.ini') ? parse_ini_file('cfg/cfg.ini',true) : [];
-			
-			if( is_array($cfg) && isset( $cfg['GoogleDriveAPI']['client_id'] ) )
-			{
-				$this->sysinfo = $cfg['GoogleDriveAPI'];
-			}
-			else if( is_array($cfg) && isset( $cfg['GoogleAPI']['client_id'] ) )
-			{
-				$this->sysinfo = $cfg['GoogleAPI'];
-			}
-			else
-			{
-				$this->sysinfo = [];
-			}
+
+			$this->sysinfo = [
+				'key' => getenv('GOOGLE_API_KEY'),
+				'client_id' => getenv('GOOGLE_CLIENT_ID'),
+				'client_secret' => getenv('GOOGLE_CLIENT_SECRET'),
+				'project_id' => getenv('GOOGLE_PROJECT_ID'),
+			];
 			
 			
 			//$this->getKeyData()
